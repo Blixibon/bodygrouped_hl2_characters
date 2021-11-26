@@ -1,0 +1,48 @@
+	eyeball "eye_right" "ValveBiped.Bip01_Head1" -1.164600 -3.860099 67.661303 "dark_eyeball_r" 1 4 "iris_unused" 0.68
+	eyeball "eye_left" "ValveBiped.Bip01_Head1" 1.444300 -3.860099 67.667704 "dark_eyeball_l" 1 -4 "iris_unused" 0.68
+
+	eyelid upper_right $ModelVTA$  lowerer 29 -0.19 neutral 0 0.15 raiser 30 0.23 split 1 eyeball "eye_right"
+	eyelid lower_right $ModelVTA$  lowerer 31 -0.28 neutral 0 -0.2 raiser 32 -0.05 split 1 eyeball "eye_right"
+	eyelid upper_left $ModelVTA$  lowerer 21 -0.19 neutral 0 0.15 raiser 22 0.23 split -1 eyeball "eye_left"
+	eyelid lower_left $ModelVTA$  lowerer 23 -0.28 neutral 0 -0.2 raiser 24 -0.05 split -1 eyeball "eye_left"
+
+	mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
+
+	flexfile $ModelVTA$ 
+	{
+		defaultflex frame 0
+		flexpair "AU12" 1 frame 1
+		flexpair "AU12" 1 frame 2
+		flex "AU12AU25" frame 3
+		flexpair "AU15" 1 frame 4
+		flexpair "AU17" 1 frame 5
+		flexpair "AU10" 1 frame 6
+		flex "AU16" frame 7
+		flexpair "AU6" 1 frame 8
+		flexpair "AU9" 1 frame 9
+		flexpair "AU25" 1 frame 10
+		flexpair "AU18" 1 frame 11
+		flexpair "AU18" 1 frame 12
+		flexpair "AU22" 1 frame 13
+		flexpair "AU20" 1 frame 14
+		flex "AU32" frame 15
+		flex "AU24" frame 16
+		flex "AU31" frame 17
+		flexpair "AU26" 1 frame 18
+		flexpair "AU27" 1 frame 19
+		flexpair "AU26Z" 1 frame 20
+		// Already in eyelid lines: flex "upper_left" frame 21
+		// Already in eyelid lines: flex "upper_left" frame 22
+		// Already in eyelid lines: flex "lower_left" frame 23
+		// Already in eyelid lines: flex "lower_left" frame 24
+		flex "AU42" frame 25
+		flexpair "AU1" 1 frame 26
+		flexpair "AU4" 1 frame 27
+		flexpair "AU1AU2" 1 frame 28
+		// Already in eyelid lines: flex "upper_right" frame 29
+		// Already in eyelid lines: flex "upper_right" frame 30
+		// Already in eyelid lines: flex "lower_right" frame 31
+		// Already in eyelid lines: flex "lower_right" frame 32
+		flexpair "AU2" 1 frame 33
+		flex "AU38" frame 34
+	}

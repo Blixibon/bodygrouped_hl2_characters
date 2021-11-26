@@ -1,0 +1,12 @@
+
+// the heads intended "forward" direction, independent of actual eye-nose-forward direction
+$attachment "forward" "ValveBiped.forward" 0 0 0
+
+//common anim attachments
+$attachment anim_attachment_RH "ValveBiped.Anim_Attachment_RH" 0 0 0 rotate -90 0 -90
+$attachment anim_attachment_LH "ValveBiped.Anim_Attachment_LH" 0 0 0 rotate -90 0 -90
+$attachment anim_attachment_head "ValveBiped.Bip01_Head1" 0 0 0 rotate -90 0 -90
+
+// This is the list of bones on the model that are bone merged against
+$bonemerge "ValveBiped.Bip01_R_Hand"
+$bonemerge "ValveBiped.Anim_Attachment_RH"

@@ -1,0 +1,62 @@
+	eyeball "eye_right" "ValveBiped.Bip01_Head1" -1.290000 -3.860002 67.090007 "eyeball_r" 1 4 "iris_unused" 0.67
+	eyeball "eye_left" "ValveBiped.Bip01_Head1" 1.200000 -3.860002 67.070010 "eyeball_l" 1 -4 "iris_unused" 0.67
+
+	eyelid upper_right $ModelVTA$ lowerer 1 -0.34 neutral 0 0.13 raiser 2 0.25 split 1 eyeball "eye_right"
+	eyelid lower_right $ModelVTA$ lowerer 3 -0.38 neutral 0 -0.27 raiser 4 -0.12 split 1 eyeball "eye_right"
+	eyelid upper_left $ModelVTA$ lowerer 5 -0.31 neutral 0 0.11 raiser 6 0.24 split -1 eyeball "eye_left"
+	eyelid lower_left $ModelVTA$ lowerer 7 -0.37 neutral 0 -0.26 raiser 8 -0.1 split -1 eyeball "eye_left"
+
+	mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
+
+	flexfile $ModelVTA$ 
+	{
+		defaultflex frame 0
+		// Already in eyelid lines: flex "upper_right" frame 1
+		// Already in eyelid lines: flex "upper_right" frame 2
+		// Already in eyelid lines: flex "lower_right" frame 3
+		// Already in eyelid lines: flex "lower_right" frame 4
+		// Already in eyelid lines: flex "upper_left" frame 5
+		// Already in eyelid lines: flex "upper_left" frame 6
+		// Already in eyelid lines: flex "lower_left" frame 7
+		// Already in eyelid lines: flex "lower_left" frame 8
+		flex "AU42" frame 9
+		flexpair "AU1" 1 frame 10
+		flexpair "AU2" 1 frame 11
+		flexpair "AU1AU2" 1 frame 12
+		flexpair "AU4" 1 frame 13
+		flexpair "AU1AU4" 1 frame 14
+		flexpair "AU2AU4" 1 frame 15
+		flexpair "AU12" 1 frame 16
+		flexpair "AU12" 1 frame 17
+		flexpair "AU12AU25" 1 frame 18
+		flexpair "AU15" 1 frame 19
+		flexpair "AU17" 1 frame 20
+		flexpair "AU14" 1 frame 21
+		flexpair "AU10" 1 frame 22
+		flex "AU10SL" frame 23
+		flex "AU16" frame 24
+		flexpair "AU6" 1 frame 25
+		flexpair "AU6" 1 frame 26
+		flexpair "AU9" 1 frame 27
+		flexpair "AU25" 1 frame 28
+		flexpair "AU18" 1 frame 29
+		flexpair "AU18" 1 frame 30
+		flexpair "AU22" 1 frame 31
+		flexpair "AU20" 1 frame 32
+		flex "AU32" frame 33
+		flex "AU24" frame 34
+		flex "AU38" frame 35
+		flex "AU31" frame 36
+		flexpair "AU26" 1 frame 37
+		flexpair "AU27" 1 frame 38
+		flexpair "AU26Z" 1 frame 39
+		flexpair "AU27Z" 1 frame 40
+		flexpair "AU22Z" 1 frame 41
+		flexpair "AU13" 1 frame 42
+		flex "AD96L" frame 43
+		flex "AD96R" frame 44
+		flex "AD30L" frame 45
+		flex "AD30R" frame 46
+		flex "AD32" frame 47
+		flex "AD32" frame 48
+	}

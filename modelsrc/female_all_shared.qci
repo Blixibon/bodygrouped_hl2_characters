@@ -1,0 +1,70 @@
+// Created by Crowbar 0.71
+
+$contents "solid"
+
+$eyeposition 0 0 70
+
+$mostlyopaque
+
+$cdmaterials "models\humans\female\"
+
+$cbox 0 0 0 0 0 0
+
+$bbox -13 -13 0 13 13 72
+
+$include "../female_include/hitbox.qci"
+$skipboneinbbox
+
+$include "../female_include/commonbones.qci"
+
+$bonemerge "ValveBiped.Bip01_Pelvis"
+$bonemerge "ValveBiped.Bip01_Spine"
+$bonemerge "ValveBiped.Bip01_Spine1"
+$bonemerge "ValveBiped.Bip01_Spine2"
+$bonemerge "ValveBiped.Bip01_Spine4"
+$bonemerge "ValveBiped.Bip01_R_Clavicle"
+$bonemerge "ValveBiped.Bip01_R_UpperArm"
+$bonemerge "ValveBiped.Bip01_R_Forearm"
+
+
+$include "../female_include/standardikchains.qci"
+
+$sequence "ragdoll" {
+	"ragdoll.smd"
+	activity "ACT_DIERAGDOLL" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	ikrule "rhand" release
+	ikrule "lhand" release
+	ikrule "rfoot" release
+	ikrule "lfoot" release
+}
+
+$includemodel "humans/female_shared.mdl"
+$includemodel "humans/female_ss.mdl"
+$includemodel "humans/female_gestures.mdl"
+$includemodel "humans/female_postures.mdl"
+
+$include "../female_include/ragdoll.qci"
+
+$collisiontext
+{
+	animatedfriction 
+	{
+		"animfrictionmin"		"1.000000"
+		"animfrictionmax"		"400.000000"
+		"animfrictiontimein"		"0.500000"
+		"animfrictiontimeout"		"0.300000"
+		"animfrictiontimehold"		"0.000000"
+	}
+	editparams 
+	{
+		"rootname"		"valvebiped.bip01_pelvis"
+		"totalmass"		"70.000000"
+		"jointmerge"		"valvebiped.bip01_pelvis,valvebiped.bip01"
+		"jointmerge"		"valvebiped.bip01_pelvis,valvebiped.bip01_spine1"
+	}
+}
+
+//$popd

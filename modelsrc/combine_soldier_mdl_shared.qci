@@ -1,0 +1,107 @@
+// Created by Crowbar 0.71
+
+// $definevariable ModelPath "Soldier_reference.smd"
+
+$bodygroup "Soldier"
+{
+	studio $ModelPath$
+}
+
+$surfaceprop "flesh"
+
+$contents "solid"
+
+$illumposition 0.067 2.255 35.51
+
+$eyeposition 0 0 73
+
+$opaque
+
+$cdmaterials "models\Combine_Soldier\"
+
+$attachment "lefthand" "ValveBiped.Bip01_L_Hand" 0 0 0 rotate 0 0 0
+$attachment "zipline" "ValveBiped.Bip01_Spine4" 3 -4 0 rotate 0 0 0
+$attachment "eyes" "ValveBiped.Bip01_Head1" 4.5 -5 0 rotate 0 -90 -90
+$attachment "beam_damage" "ValveBiped.Bip01_Spine2" 0 0 0 rotate 0 0 0
+$attachment "anim_attachment_RH" "ValveBiped.Anim_Attachment_RH" 0 0 0 rotate -90 -90 0
+$attachment "anim_attachment_LH" "ValveBiped.Anim_Attachment_LH" 0 0 0 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -13 -13 0 13 13 72
+
+$hboxset "default"
+$hbox 2 "ValveBiped.Bip01_Spine" -1 -4.74 -7.22 7 8.27 6.78
+$hbox 1 "ValveBiped.Bip01_Head1" -1.75 -8 -3.5 7.25 4 3.5
+$hbox 4 "ValveBiped.Bip01_L_UpperArm" -2 -2.75 -2.75 12 2.75 2.75
+$hbox 4 "ValveBiped.Bip01_L_Forearm" 0 -2.44 -2.15 10 2.06 2.35
+$hbox 4 "ValveBiped.Bip01_L_Hand" 0.25 -1 -2 5.75 1 2
+$hbox 5 "ValveBiped.Bip01_R_UpperArm" -2 -2.75 -2.75 12 2.75 2.75
+$hbox 5 "ValveBiped.Bip01_R_Forearm" 0 -2.25 -2.25 10 2.25 2.25
+$hbox 5 "ValveBiped.Bip01_R_Hand" 0.5 -0.96 -2.33 5.5 1.04 2.61
+$hbox 6 "ValveBiped.Bip01_L_Thigh" 1.07 -3 -3 18.92 5 4
+$hbox 6 "ValveBiped.Bip01_L_Calf" 0.5 -3.5 -2.8 15.5 3.5 3.2
+$hbox 6 "ValveBiped.Bip01_L_Foot" -0.5 -1.5 -2 5.5 4.5 2.5
+$hbox 6 "ValveBiped.Bip01_L_Toe0" -0.25 -1.75 -2.19 3.25 0.75 2.46
+$hbox 7 "ValveBiped.Bip01_R_Thigh" 1 -5.5 -3.5 19 3.5 3.5
+$hbox 7 "ValveBiped.Bip01_R_Calf" 0.5 -4.01 -2.57 15.5 3.99 2.93
+$hbox 7 "ValveBiped.Bip01_R_Foot" -1.25 -4 -2.25 5.25 2 2.25
+$hbox 7 "ValveBiped.Bip01_R_Toe0" -1 -0.75 -2.6 3 1.75 2.1
+$hbox 0 "ValveBiped.Bip01_Pelvis" -7 -4.5 -8 7 4.5 5
+$hbox 0 "ValveBiped.Bip01_Spine2" -1 -4.25 -7.25 13 8.25 7.25
+$skipboneinbbox
+
+$bonemerge "ValveBiped.Bip01_Pelvis"
+$bonemerge "ValveBiped.Bip01_Spine"
+$bonemerge "ValveBiped.Bip01_Spine1"
+$bonemerge "ValveBiped.Bip01_Spine2"
+$bonemerge "ValveBiped.Bip01_Spine4"
+$bonemerge "ValveBiped.Bip01_R_Clavicle"
+$bonemerge "ValveBiped.Bip01_R_UpperArm"
+$bonemerge "ValveBiped.Bip01_R_Forearm"
+$bonemerge "ValveBiped.Bip01_R_Hand"
+
+
+$include "../combine_soldier_include/standardikchains.qci"
+
+$sequence "ragdoll" {
+	"ragdoll.smd"
+	activity "ACT_DIERAGDOLL" 1
+	ikrule "rhand" release
+	ikrule "lhand" release
+	ikrule "rfoot" release
+	ikrule "lfoot" release
+}
+
+$includemodel "combine_soldier_anims.mdl"
+
+$include "../combine_soldier_include/ragdoll.qci"
+
+$collisiontext
+{
+	animatedfriction 
+	{
+		"animfrictionmin"		"1.000000"
+		"animfrictionmax"		"1000.000000"
+		"animfrictiontimein"		"0.800000"
+		"animfrictiontimeout"		"0.500000"
+		"animfrictiontimehold"		"0.000000"
+	}
+	editparams 
+	{
+		"rootname"		"valvebiped.bip01_pelvis"
+		"totalmass"		"100.000000"
+		"jointmerge"		"valvebiped.bip01_pelvis,valvebiped.bip01"
+		"jointmerge"		"valvebiped.bip01_pelvis,valvebiped.bip01_spine1"
+	}
+}
+
+$keyvalues
+{
+	physgun_interactions 
+	{
+		"onpickup"		"boogie"
+		"onlaunch"		"spin_zaxis"
+		"onfirstimpact"		"bloodsplat"
+	}
+}
