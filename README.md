@@ -2,7 +2,6 @@
 <img src="https://lh3.googleusercontent.com/fife/AAWUweVT6pTzHPZlLvYSkDYElqA9puNzp5rRKqOKu5GQ50f9ihglpEuEyAJRdEc-4Ci5Zbv9bOpEMCN-SGyrPf0tKwTF-5n1MAMUh3RWXdqHop_ycyVFCRL-LmBOzJbNK02LUD9FpMMK4l4Z8ljImnCzPcI-FnDIPc6EfM3emICvFUNrja_cAml3xi-xuHdvwu_go7-GyXF6dWjmSLfRLUGimmhIWBktfjr6_F1AkkxXHpq9nSQKskzTH5Gs8UuCwd2YT-E3HaP99H9mITZZKbObo2fMY2dZ6Ht5g2bwJZ_LCO285pXqOB4LJxIgErnt53CFD3qLS__rAHq_uppWohCbFgizxg6qyvbqhUNhJG5aXqPSSpYQUhVu_DG03yr_DlrqMlnkXMmnM3uH6iQYZJ1wWtUVOtxFvz3ePRvl44xuR1Mjach-A_MW8PWDVUAqkxD0LHmykS3TMHkI0Myr4kKaszDZc3resxGH2nOzWO4duyECsJUgM_9crjMWh-NQCJ_zbjVWZUCV_aPVd5cRldVerI36rKXwxHlJGLZ1RIbhH1URKmfDs04_CA5uNciKl-LthCpNP6rcsL4toDRqVTAnDYaxM1sBQGABHK-0Bk026rfvQPraTReBoRM6W3cEFzyCP6dJix_-9w93LuD7X7-wHF0LdXoypszkzo63Q_4vF6pLXhlSBk3W0REwNxpSuqrgnoMZsdi1vr7HhrzNFzfX7sxNWp8EeCTykSw=w1680-h882-ft" width="512"/>
 </p>
 
-
 This repository contains some of Half-Life 2's character models with their clothing/body parts separated into bodygroups.
 
 **Note that this is a work in progress at the moment!!!** Stability is not guaranteed.
@@ -42,36 +41,36 @@ Some custom examples are also included using the interchangable bodygroups:
 
 ---
 
-## What could this be used for?
+### What could this be used for?
 
 This is intended to assist in modifying stock Half-Life 2 character models and/or creating new ones. Since each model has been split into bodygroups, they can be modified or interchanged on a part-by-part basis and recompiled easily.
 
 For example, this can be used to create a new citizen group using only a few shared meshes and a few simple QCs.
 
-## Can I use this in my own project and/or as a base for new models?
+### Can I use this in my own project and/or as a base for new models?
 
 **YES!** Please feel free to use these files in any way you'd like. These are intended to be free assets anyone can use or modify, requiring nothing more than credit to this project.
 
-## Do these replace the default HL2 models?
+### Do these replace the default HL2 models?
 
 By default, yes. All of the QCs point to their original model names. In-game, they should look and act identical for the most part.
 
-## Do these require new materials?
+### Do these require new materials?
 
 No. These only use the stock materials the original models used.
 
-## What are the "_filled" torso models?
+### What are the "_filled" torso models?
 
 Those SMDs have the neckline filled in with triangles, as opposed to being an empty slot where the head used to be. These were created as a compromise for neck differences between citizens causing visible voids in certain torso meshes.
 
-## Why did you make this?
+### Why did you make this?
 
 I originally started this with the intention of creating a stock and free-to-use base for citizen models with interchangable clothing. That initial concept was inspired by the Enhanced Citizens addon from Garry's Mod, which contains a wide selection of clothing which can be easily swapped via bodygroups.
 
 I've always wanted to make Half-Life 2 maps/mods involving citizens with interchangable clothing, but Enhanced Citizens is designed for filmmaking and isn't very compatible with NPCs, let alone the rest of Half-Life 2's assets. I've also had trouble finding information on some of its origins and it's dubious whether or not they could be used in, say, a Half-Life 2 mod which is distributed for people to play.
 
-I've had the idea of simple bodygroup-separated stock citizens for years, but I recently cultivated some basic modeling skills and realized it wouldn't be difficult for me to do this myself. In fact, separating the meshes was a lot easier than I thought, which let me to expand this to other Half-Life 2 character models as well.
+I've had the idea of simple bodygroup-separated stock citizens for years, but I recently cultivated some basic modeling skills and realized it wouldn't be difficult for me to do this myself. In fact, separating the meshes was a lot easier than I thought, which led me to expand this to other Half-Life 2 character models as well.
 
-## Does this require Mapbase?
+### Does this require Mapbase?
 
 No.
