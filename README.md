@@ -22,6 +22,7 @@ The following models have been separated and are currently included in this repo
 * All Combine Soldiers (including prison guards and elites)
 * Metrocops
 * Barney (both HL2 and EP1 variants)
+* Kleiner (HL2, EP1, and EP2 variants)
 * *More coming soon!*
 
 LODs are not currently included.
