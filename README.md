@@ -23,6 +23,7 @@ The following models have been separated and are currently included in this repo
 * Metrocops
 * Barney (both HL2 and EP1 variants)
 * Kleiner (HL2, EP1, and EP2 variants)
+* Eli (HL2, EP1, and EP2 variants)
 * Odessa
 * *More coming soon!*
 

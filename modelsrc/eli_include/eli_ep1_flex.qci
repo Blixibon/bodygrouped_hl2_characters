@@ -1,0 +1,62 @@
+	eyeball "eye_right" "ValveBiped.Bip01_Head1" -1.430000 -2.840002 67.560008 "eyeball_r" 1 4 "iris_unused" 0.63
+	eyeball "eye_left" "ValveBiped.Bip01_Head1" 1.240000 -2.840002 67.580012 "eyeball_l" 1 -4 "iris_unused" 0.63
+
+	eyelid upper_right $ModelVTA$ lowerer 33 -0.23 neutral 0 0.14 raiser 34 0.25 split 1 eyeball "eye_right"
+	eyelid lower_right $ModelVTA$ lowerer 35 -0.34 neutral 0 -0.24 raiser 36 -0.1 split 1 eyeball "eye_right"
+	eyelid upper_left $ModelVTA$ lowerer 37 -0.25 neutral 0 0.12 raiser 38 0.23 split -1 eyeball "eye_left"
+	eyelid lower_left $ModelVTA$ lowerer 39 -0.36 neutral 0 -0.26 raiser 40 -0.12 split -1 eyeball "eye_left"
+
+	mouth 0 "mouth" "ValveBiped.Bip01_Head1" 0 1 0
+
+	flexfile $ModelVTA$ 
+	{
+		defaultflex frame 0
+		flexpair "AU12" 1 frame 1
+		flexpair "AU12" 1 frame 2
+		flexpair "AU12AU25" 1 frame 3
+		flexpair "AU20" 1 frame 4
+		flex "AU31" frame 5
+		flexpair "AU26" 1 frame 6
+		flexpair "AU27" 1 frame 7
+		flexpair "AU26Z" 1 frame 8
+		flexpair "AU27Z" 1 frame 9
+		flexpair "AU13" 1 frame 10
+		flex "AD96L" frame 11
+		flex "AD30L" frame 12
+		flex "AD30R" frame 13
+		flex "AD32" frame 14
+		flexpair "AU1AU4" 1 frame 15
+		flexpair "AU2AU4" 1 frame 16
+		flexpair "AU15" 1 frame 17
+		flexpair "AU17" 1 frame 18
+		flexpair "AU14" 1 frame 19
+		flexpair "AU10" 1 frame 20
+		flex "AU10SL" frame 21
+		flex "AU16" frame 22
+		flexpair "AU9" 1 frame 23
+		flexpair "AU25" 1 frame 24
+		flexpair "AU18" 1 frame 25
+		flexpair "AU18" 1 frame 26
+		flexpair "AU22" 1 frame 27
+		flex "AU32" frame 28
+		flex "AU24" frame 29
+		flexpair "AU22Z" 1 frame 30
+		flex "AD96R" frame 31
+		flex "AD32" frame 32
+		// Already in eyelid lines: flex "upper_right" frame 33
+		// Already in eyelid lines: flex "upper_right" frame 34
+		// Already in eyelid lines: flex "lower_right" frame 35
+		// Already in eyelid lines: flex "lower_right" frame 36
+		// Already in eyelid lines: flex "upper_left" frame 37
+		// Already in eyelid lines: flex "upper_left" frame 38
+		// Already in eyelid lines: flex "lower_left" frame 39
+		// Already in eyelid lines: flex "lower_left" frame 40
+		flex "AU42" frame 41
+		flexpair "AU1" 1 frame 42
+		flexpair "AU2" 1 frame 43
+		flexpair "AU1AU2" 1 frame 44
+		flexpair "AU4" 1 frame 45
+		flexpair "AU6" 1 frame 46
+		flexpair "AU6" 1 frame 47
+		flex "AU38" frame 48
+	}
