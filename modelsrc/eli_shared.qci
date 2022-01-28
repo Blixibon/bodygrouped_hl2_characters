@@ -69,8 +69,6 @@ $bonemerge "ValveBiped.Bip01_R_Forearm"
 $bonemerge "ValveBiped.Bip01_R_Hand"
 $bonemerge "ValveBiped.Anim_Attachment_RH"
 
-$proceduralbones "kleiner.vrd"
-
 $include "../male_include/standardikchains.qci"
 
 $sequence "ragdoll" {
