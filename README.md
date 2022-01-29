@@ -19,6 +19,7 @@ The following models have been separated and are currently included in this repo
 
 * All Citizens (including both genders and all groups)
 	* Alternate torsos, legs, and hands are available as alternate bodygroups (e.g. blue rebels vs. green rebels)
+		* Note that, in order to maintain their original appearance, bodygroup arrangement is based on the original models and will be inconsistent between each citizen. The "congruent_group##" folders contain identical QCs which *do* follow a consistent bodygroup arrangement if this is needed.
 * All Combine Soldiers (including prison guards and elites)
 * Metrocops
 * Barney (both HL2 and EP1 variants)
@@ -31,9 +32,9 @@ LODs are not currently included.
 
 Some custom examples are also included using the interchangable bodygroups:
 
-* custom_group03_nobeanie - A custom version of the rebel models which have no beanies; these compile into "group03/no_beanie"
-* custom_group03m_beanie - A custom version of the rebel medic models which have beanies; these compile into "group03m/beanie"
-* barney_custom_rebel.qc - A custom version of Barney's EP1 model which uses a rebel uniform instead of a metrocop uniform.
+* citizens/custom_group03_nobeanie - A custom version of the rebel models which have no beanies; these compile into "group03/no_beanie"
+* citizens/custom_group03m_beanie - A custom version of the rebel medic models which have beanies; these compile into "group03m/beanie"
+* barney/barney_custom_rebel.qc - A custom version of Barney's EP1 model which uses a rebel uniform instead of a metrocop uniform.
 
 ### Credits
 
