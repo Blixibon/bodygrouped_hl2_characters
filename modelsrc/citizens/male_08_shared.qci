@@ -1,0 +1,25 @@
+// Created by Crowbar 0.71
+
+//$pushd "male\"
+
+// $definevariable ModelPath "male_08_reference.smd"
+// $definevariable ModelVTA "male_08_01.vta"
+// $definevariable ModelFlex "../../male_include/male_08_flex.qci"
+
+$model "male_08" $ModelPath$ {
+
+	$include $ModelFlex$
+
+	$include "../../male_include/facerules_xsi.qci"
+	$include "../../male_include/bodyrules_xsi.qci"
+}
+
+$illumposition 0 -0.637 36.058
+
+$attachment "eyes" "ValveBiped.Bip01_Head1" 3.39 -3.75 0.04 rotate 0 -80.1 -90
+$attachment "mouth" "ValveBiped.Bip01_Head1" 0.7 -5.2 0 rotate 0 -80 -90
+$attachment "chest" "ValveBiped.Bip01_Spine2" 5 4 0 rotate 0 90 90
+
+$include "../male_all_shared.qci"
+
+//$popd
