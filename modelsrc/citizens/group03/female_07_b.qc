@@ -23,7 +23,7 @@ $bodygroup "hands"
 $bodygroup "torso"
 {
 	studio "female_torso_rebel_1_filled.smd"
-	studio "female_torso_rebel_1_filled.smd"
+	studio "female_torso_rebel_2_filled.smd"
 }
 
 $bodygroup "legs"
