@@ -22,9 +22,11 @@ The following models have been separated and are currently included in this repo
 		* Note that, in order to maintain their original appearance, bodygroup arrangement is based on the original models and will be inconsistent between each citizen. The "congruent_group##" folders contain identical QCs which *do* follow a consistent bodygroup arrangement if this is needed.
 * All Combine Soldiers (including prison guards and elites)
 * Metrocops
-* Barney (both HL2 and EP1 variants)
+* Barney (HL2 and EP1 variants)
 * Kleiner (HL2, EP1, and EP2 variants)
 * Eli (HL2, EP1, and EP2 variants)
+* Mossman (HL2 and EP1 variants)
+	* Includes a custom version of the EP1 head with a longer neck, allowing it to fit on citizen torsos and beyond
 * Odessa
 * *More coming soon!*
 

@@ -1,0 +1,106 @@
+// Created by Crowbar 0.71
+
+// $definevariable ModelPath "mossman_reference.smd"
+// $definevariable ModelVTA "mossman_01.vta"
+// $definevariable ModelFlex "../mossman_include/mossman_flex.qci"
+// $definevariable ModelFaceRules "../mossman_include/facerules_xsi.qci"
+// $definevariable ModelBodyRules "../mossman_include/bodyrules_xsi.qci"
+
+$model "mossman" $ModelPath$ {
+
+	$include $ModelFlex$
+	
+	$include $ModelFaceRules$
+	$include $ModelBodyRules$
+}
+
+$contents "solid"
+
+//$illumposition 0.144 -0.364 34.73
+
+$eyeposition 0 0 65
+
+$mostlyopaque
+
+$cdmaterials "models\Mossman\"
+
+$attachment "physgun_attachment" "ValveBiped.physgun_attachment" 0 0 0 rotate -90 -90 0
+$attachment "eyes" "ValveBiped.Bip01_Head1" 2.9 -3.7 0.09 rotate 0 -80.1 -90
+$attachment "mouth" "ValveBiped.Bip01_Head1" 0.2 -5.4 0 rotate 0 -80 -90
+$attachment "chest" "ValveBiped.Bip01_Spine2" 5 4 0 rotate 0 90 90
+$attachment "forward" "ValveBiped.forward" 0 0 0 rotate 0 0 0
+$attachment "anim_attachment_RH" "ValveBiped.Anim_Attachment_RH" 0 0 0 rotate -90 -90 0
+$attachment "anim_attachment_LH" "ValveBiped.Anim_Attachment_LH" 0 0 0 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -13 -13 0 13 13 72
+
+$hboxset "default"
+$hbox 1 "ValveBiped.Bip01_Head1" -2.25 -5 -3.15 7.25 5 3.35
+$hbox 4 "ValveBiped.Bip01_L_UpperArm" -0.81 -2.25 -3.05 11.19 2.75 1.2
+$hbox 4 "ValveBiped.Bip01_L_Forearm" -1.25 -1.88 -2 11.75 1.62 1
+$hbox 4 "ValveBiped.Bip01_L_Hand" 0 -1.07 -1.5 6 0.68 3
+$hbox 5 "ValveBiped.Bip01_R_UpperArm" -1.5 -2.25 -1.25 11.5 2.75 2.75
+$hbox 5 "ValveBiped.Bip01_R_Forearm" -0.82 -1.9 -1.15 11.18 1.6 1.85
+$hbox 5 "ValveBiped.Bip01_R_Hand" -0.5 -1.13 -3.25 5.5 0.63 1.75
+$hbox 6 "ValveBiped.Bip01_L_Thigh" 0.5 -3.5 -3.25 17.5 4.5 3.25
+$hbox 6 "ValveBiped.Bip01_L_Calf" 0.74 -2.35 -2.15 17.74 3.65 2.35
+$hbox 6 "ValveBiped.Bip01_L_Foot" -2 -1.8 -1.45 6 3.2 2.05
+$hbox 6 "ValveBiped.Bip01_L_Toe0" -0.17 -1.5 -1.3 2.57 0.3 1.7
+$hbox 7 "ValveBiped.Bip01_R_Thigh" 0.5 -3.5 -3 17.5 4.5 3
+$hbox 7 "ValveBiped.Bip01_R_Calf" 0.74 -2.35 -2.35 17.74 3.65 2.15
+$hbox 7 "ValveBiped.Bip01_R_Foot" -2 -1.75 -2.15 6 3.25 1.35
+$hbox 7 "ValveBiped.Bip01_R_Toe0" 0 -1.38 -1.63 2.74 0.38 1.63
+$hbox 3 "ValveBiped.Bip01_Pelvis" -5.25 -3.88 -6.25 5.75 4.12 3.75
+$hbox 3 "ValveBiped.Bip01_Spine1" -4.5 -2 -4.98 3.5 6 4.97
+$hbox 2 "ValveBiped.Bip01_Spine2" -0.5 -2.5 -6 10.5 7.5 6
+$skipboneinbbox
+
+$bonemerge "ValveBiped.Bip01_Pelvis"
+$bonemerge "ValveBiped.Bip01_Spine"
+$bonemerge "ValveBiped.Bip01_Spine1"
+$bonemerge "ValveBiped.Bip01_Spine2"
+$bonemerge "ValveBiped.Bip01_Spine4"
+$bonemerge "ValveBiped.Bip01_R_Clavicle"
+$bonemerge "ValveBiped.Bip01_R_UpperArm"
+$bonemerge "ValveBiped.Bip01_R_Forearm"
+$bonemerge "ValveBiped.Bip01_R_Hand"
+$bonemerge "ValveBiped.Anim_Attachment_RH"
+
+$include "../female_include/standardikchains.qci"
+
+$sequence "ragdoll" {
+	"ragdoll.smd"
+	activity "ACT_DIERAGDOLL" 1
+	ikrule "rhand" release
+	ikrule "lhand" release
+	ikrule "rfoot" release
+	ikrule "lfoot" release
+}
+
+$includemodel "mossman_anims.mdl"
+$includemodel "mossman_postures.mdl"
+$includemodel "mossman_gestures.mdl"
+$includemodel "humans/female_shared.mdl"
+
+$include "../female_include/ragdoll.qci"
+
+$collisiontext
+{
+	animatedfriction 
+	{
+		"animfrictionmin"		"1.000000"
+		"animfrictionmax"		"400.000000"
+		"animfrictiontimein"		"0.500000"
+		"animfrictiontimeout"		"0.300000"
+		"animfrictiontimehold"		"0.000000"
+	}
+	editparams 
+	{
+		"rootname"		"valvebiped.bip01_pelvis"
+		"totalmass"		"70.000000"
+		"jointmerge"		"valvebiped.bip01_pelvis,valvebiped.bip01"
+		"jointmerge"		"valvebiped.bip01_pelvis,valvebiped.bip01_spine1"
+	}
+}
