@@ -28,6 +28,7 @@ The following models have been separated and are currently included in this repo
 * Mossman (HL2 and EP1 variants)
 	* Includes a custom version of the EP1 head with a longer neck, allowing it to fit on citizen torsos and beyond
 * Odessa
+* "Cohrt" (uses the head from CS:S's hostage_04.mdl and requires cohrt.vtf/cohrt.vmt from CS:S)
 * *More coming soon!*
 
 LODs are not currently included.
