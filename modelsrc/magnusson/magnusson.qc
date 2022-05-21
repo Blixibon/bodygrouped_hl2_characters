@@ -4,8 +4,8 @@ $modelname "magnusson.mdl"
 
 $definevariable ModelPath "magnusson_reference.smd"
 $definevariable ModelVTA "magnusson_01.vta"
-$definevariable ModelFlex "../magnusson_include/kleiner_flex.qci"
-$definevariable ModelFaceRules "../male_include/facerules_xsi.qci"
+$definevariable ModelFlex "../magnusson_include/magnusson_flex.qci"
+$definevariable ModelFaceRules "../magnusson_include/facerules_xsi.qci"
 $definevariable ModelBodyRules "../male_include/bodyrules_xsi.qci"
 
 $pushd "..\magnusson_include\"
@@ -24,6 +24,12 @@ $bodygroup "torso"
 $bodygroup "legs"
 {
 	studio "magnusson_legs_1.smd"
+}
+
+$bodygroup "badge"
+{
+	studio "magnusson_badge_1.smd"
+	blank
 }
 
 $popd
