@@ -29,6 +29,9 @@ The following models have been separated and are currently included in this repo
 	* Includes a custom version of the EP1 head with a longer neck, allowing it to fit on citizen torsos and beyond
 * Magnusson
 * Odessa
+* Gordon (HL2: Survivor version)
+	* Includes a custom version of the head with a longer neck and a different position which fits on citizen torsos and beyond
+		* Note that the flexes on this custom version are not currently 1:1 with the original head.
 * "Cohrt" (uses the head from CS:S's `hostage_04.mdl` and requires `cohrt.vtf`/`cohrt.vmt` from CS:S)
 * *More coming soon!*
 
@@ -39,6 +42,7 @@ Some custom examples are also included using the interchangable bodygroups:
 * citizens/custom_group03_nobeanie - A custom version of the rebel models which have no beanies; these compile into "group03/no_beanie"
 * citizens/custom_group03m_beanie - A custom version of the rebel medic models which have beanies; these compile into "group03m/beanie"
 * barney/barney_custom_rebel.qc - A custom version of Barney's EP1 model which uses a rebel uniform instead of a metrocop uniform.
+* gordon/gordon_custom_citizen.qc - A custom version of the Gordon model which uses a citizen outfit instead of an HEV suit.
 
 ### Credits
 
